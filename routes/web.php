@@ -15,4 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('blog');
+
+Route::get('/about-me', function () {
+    return view('welcome');
+})->name('aboutMe');
+
+Route::get('/blog/{id}', function () {
+    return view('blog.show');
+})->name('readBlog');

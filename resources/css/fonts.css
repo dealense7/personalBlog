@@ -1,0 +1,43 @@
+@font-face {
+    font-family: bold;
+    src: url('../fonts/OpenSans_SemiCondensed-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: bolder;
+    src: url('../fonts/JetBrainsMonoNL-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: medium;
+    src: url('../fonts/JetBrainsMonoNL-Medium.ttf');
+}
+
+@font-face {
+    font-family: normal;
+    src: url('../fonts/JetBrainsMonoNL-Regular.ttf');
+}
+
+.font-bold {
+    font-family: bold, serif;
+}
+
+.font-bolder {
+    font-family: bolder, serif;
+}
+
+.hover\:font-bolder:hover {
+    font-family: bolder, serif;
+}
+
+.font-medium {
+    font-family: medium, serif;
+}
+
+.font-normal {
+    font-family: normal, serif;
+}
+
+.text-xx {
+    font-size: 0.7rem;
+}
