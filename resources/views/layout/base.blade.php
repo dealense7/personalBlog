@@ -8,7 +8,6 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
 </head>
 <body>
 @yield('template')
