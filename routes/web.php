@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,8 @@ Route::get('/about-me', function () {
 Route::get('/blog/{id}', function () {
     return view('blog.show');
 })->name('readBlog');
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('/create', [PostController::class, 'create'])->name('createPost');
+    Route::get('/store', [PostController::class, 'store'])->name('storePost');
+});
