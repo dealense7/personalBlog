@@ -15,6 +15,11 @@ class Post extends Model
 {
     protected $table = 'posts';
 
+    protected $fillable = [
+        'title',
+        'content',
+    ];
+
     public function getId(): int
     {
         return $this->id;

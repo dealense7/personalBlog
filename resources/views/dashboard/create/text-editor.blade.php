@@ -36,7 +36,7 @@
             Preview
         </button>
     </div>
-    <textarea id="editor" name="editor" class="w-full font-normal text-sm focus:outline-none p-3" rows="15" placeholder="Type your Markdown text here..."></textarea>
+    <textarea id="editor" required name="editor" class="w-full font-normal text-sm focus:outline-none p-3" rows="15" placeholder="Type your Markdown text here..."></textarea>
     <div class="w-4/5 mx-auto font-normal text-sm">
         <div id="previewArea"></div>
     </div>

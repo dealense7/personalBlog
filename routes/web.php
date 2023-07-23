@@ -28,5 +28,5 @@ Route::get('/blog/{id}', function () {
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/create', [PostController::class, 'create'])->name('createPost');
-    Route::get('/store', [PostController::class, 'store'])->name('storePost');
+    Route::post('/store', [PostController::class, 'store'])->name('storePost');
 });

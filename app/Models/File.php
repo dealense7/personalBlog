@@ -16,6 +16,15 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  */
 class File extends Model
 {
+    protected $fillable = [
+        'path',
+        'file_name',
+        'mime_type',
+        'size',
+        'fileable_id',
+        'fileable_type',
+    ];
+
     public function getId(): int
     {
         return $this->id;

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Contracts\Services\PostServiceContract;
+use App\Http\Requests\PostSaveRequest;
 use App\Models\Post;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -21,12 +24,16 @@ class PostController extends Controller
         return view('dashboard.create.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store(
+        PostSaveRequest     $request,
+        PostServiceContract $service
+    ): RedirectResponse
     {
-        //
+        $data = $request->validated();
+
+        $service->create($data);
+
+        return back();
     }
 
     /**
